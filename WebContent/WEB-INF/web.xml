@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <servlet-name>AddNovel</servlet-name>
+    <servlet-class>top.neusoftware.novel.AddNovel</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewBranches</servlet-name>
+    <servlet-class>top.neusoftware.novel.ViewBranches</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Read</servlet-name>
+    <servlet-class>top.neusoftware.novel.Read</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddBranch</servlet-name>
+    <servlet-class>top.neusoftware.novel.AddBranch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddNovel</servlet-name>
+    <url-pattern>/AddNovel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewBranches</servlet-name>
+    <url-pattern>/ViewBranches</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Read</servlet-name>
+    <url-pattern>/Read</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddBranch</servlet-name>
+    <url-pattern>/AddBranch</url-pattern>
+  </servlet-mapping>
+</web-app>
