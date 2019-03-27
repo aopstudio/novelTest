@@ -10,7 +10,7 @@ public class Functions {
 	public static void func(File file,HttpServletResponse response) throws IOException{
 		File[] fs = file.listFiles();
 		for(File f:fs){
-			if(f.isDirectory())	{//��ӡĿ¼
+			if(f.isDirectory())	{//打印目录
 				String getPath=f.getPath();
 				String path=URLEncoder.encode(getPath, "UTF-8");
 				String getName=f.getName();

@@ -36,8 +36,8 @@ public class AddNovel extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 
         PrintWriter out = response.getWriter();
-        String title = "Ê¹ÓÃ POST ·½·¨¶ÁÈ¡±íµ¥Êı¾İ";
-        // ´¦ÀíÖĞÎÄ
+        String title = "ä½¿ç”¨ POST æ–¹æ³•è¯»å–è¡¨å•æ•°æ®";
+        // å¤„ç†ä¸­æ–‡
         String name =new String(request.getParameter("name").getBytes("ISO8859-1"),"UTF-8");
         String docType = "<!DOCTYPE html> \n";
         out.println(docType +
@@ -46,9 +46,9 @@ public class AddNovel extends HttpServlet {
             "<body bgcolor=\"#f0f0f0\">\n" +
             "<h1 align=\"center\">" + title + "</h1>\n" +
             "<ul>\n" +
-            "  <li><b>Õ¾µãÃû</b>£º"
+            "  <li><b>ç«™ç‚¹å</b>ï¼š"
             + name + "\n" +
-            "  <li><b>ÍøÖ·</b>£º"
+            "  <li><b>ç½‘å€</b>ï¼š"
             + request.getParameter("url") + "\n" +
             "</ul>\n" +
             "</body></html>");
@@ -70,8 +70,8 @@ public class AddNovel extends HttpServlet {
 		PrintWriter pw = new PrintWriter(new FileWriter(strPath+"\\1.txt"));
 		String content=request.getParameter("content");
 		pw.print(content);
-        response.getWriter().println("Ìá½»³É¹¦");
-        response.getWriter().println("<a href=\"http://localhost:8080/novelTest\">·µ»ØÊ×Ò³</a>");
+        response.getWriter().println("æäº¤æˆåŠŸ");
+        response.getWriter().println("<a href=\"http://localhost:8080/novelTest\">è¿”å›é¦–é¡µ</a>");
         pw.close();
 	}
 

@@ -33,14 +33,14 @@ public class ViewBranches extends HttpServlet {
 				"<html>\r\n" + 
 				"<head>\r\n" + 
 				"<meta charset=\"utf-8\">\r\n" + 
-				"<title>查看分支</title>\r\n" + 
+				"<title>鏌ョ湅鍒嗘敮</title>\r\n" + 
 				"<link href=\"https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css\" rel=\"stylesheet\">\r\n" + 
 				"</head>\r\n" + 
 				"<body>\r\n" + 
 				"<div class=\"container\">"+
-				"<h1>查看分支</h1>    \r\n" + 
+				"<h1>鏌ョ湅鍒嗘敮</h1>    \r\n" + 
 				"<div class=\"list-group\">");
-		String path = "D:\\novels";		//要遍历的路径
+		String path = "D:\\novels";		//瑕侀亶鍘嗙殑璺緞
 		File file = new File(path);
 		Functions.func(file, response);
 		response.getWriter().print("</div>\r\n"+

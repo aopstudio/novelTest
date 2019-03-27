@@ -39,29 +39,29 @@ public class Read extends HttpServlet {
 				"<html>\r\n" + 
 				"<head>\r\n" + 
 				"<meta charset=\"utf-8\">\r\n" + 
-				"<title>²é¿´·ÖÖ§</title>\r\n" + 
+				"<title>æŸ¥çœ‹åˆ†æ”¯</title>\r\n" + 
 				"<link href=\"https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css\" rel=\"stylesheet\">\r\n" + 
 				"</head>\r\n" + 
 				"<body>\r\n" + 
 				"<div class=\"container\">"+
-				"<h1>Ğ¡ËµÄÚÈİ</h1>    \r\n"+
+				"<h1>å°è¯´å†…å®¹</h1>    \r\n"+
 				"<p>");
 		
-		String getName=request.getParameter("name");	//»ñÈ¡ÎÄ¼ş¼ĞÃû
-		String getPath=request.getParameter("path");	//»ñÈ¡ÎÄ¼ş¼ĞÍêÕûÂ·¾¶
-		String directoryPath=URLDecoder.decode(getPath, "UTF-8");	//Ñ¡ÔñtxtÎÄ¼ş
+		String getName=request.getParameter("name");	//è·å–æ–‡ä»¶å¤¹å
+		String getPath=request.getParameter("path");	//è·å–æ–‡ä»¶å¤¹å®Œæ•´è·¯å¾„
+		String directoryPath=URLDecoder.decode(getPath, "UTF-8");	//é€‰æ‹©txtæ–‡ä»¶
 		String filePath=directoryPath+"\\1.txt";
 		FileReader reader = new FileReader(filePath);
-        BufferedReader br = new BufferedReader(reader); // ½¨Á¢Ò»¸ö¶ÔÏó£¬Ëü°ÑÎÄ¼şÄÚÈİ×ª³É¼ÆËã»úÄÜ¶Á¶®µÄÓïÑÔ
+        BufferedReader br = new BufferedReader(reader); // å»ºç«‹ä¸€ä¸ªå¯¹è±¡ï¼Œå®ƒæŠŠæ–‡ä»¶å†…å®¹è½¬æˆè®¡ç®—æœºèƒ½è¯»æ‡‚çš„è¯­è¨€
         String line;
-        //ÍøÓÑÍÆ¼ö¸ü¼Ó¼ò½àµÄĞ´·¨
+        //ç½‘å‹æ¨èæ›´åŠ ç®€æ´çš„å†™æ³•
         while ((line = br.readLine()) != null) {
-            // Ò»´Î¶ÁÈëÒ»ĞĞÊı¾İ
+            // ä¸€æ¬¡è¯»å…¥ä¸€è¡Œæ•°æ®
         	response.getWriter().println(line);
         }
         
 		response.getWriter().println("</p>\r\n" +
-				"<a class=\"btn btn-primary btn-lg\" href=\"/novelTest/WriteBranch?directory="+URLEncoder.encode(getPath, "UTF-8")+"&name="+URLEncoder.encode(getName, "UTF-8")+"\">ĞÂ½¨·ÖÖ§</a>\r\n" +
+				"<a class=\"btn btn-primary btn-lg\" href=\"/novelTest/WriteBranch?directory="+URLEncoder.encode(getPath, "UTF-8")+"&name="+URLEncoder.encode(getName, "UTF-8")+"\">æ–°å»ºåˆ†æ”¯</a>\r\n" +
 				"</div>\r\n" +
 				"</body>\r\n" +
 				"</html>");

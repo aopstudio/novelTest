@@ -45,26 +45,26 @@ public class AddBranch extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		
-		String getName=request.getParameter("name");	//»ñÈ¡ÎÄ¼ş¼ĞÃû(Î´½âÂë£©
-		String parentName=URLDecoder.decode(getName, "UTF-8");	//²ÎÊı½âÂë£¬µÃµ½¸¸·ÖÖ§ÎÄ¼ş¼ĞÃû
-		String getPath=request.getParameter("path");	//²ÎÊıµÃµ½µÄÔ­Ê¼Â·¾¶×Ö·û´®£¨»¹Î´½âÂë£©
-		String parentPath=URLDecoder.decode(getPath, "UTF-8");	//²ÎÊı½âÂë£¬µÃµ½¸¸·ÖÖ§Â·¾¶
+		String getName=request.getParameter("name");	//è·å–æ–‡ä»¶å¤¹å(æœªè§£ç ï¼‰
+		String parentName=URLDecoder.decode(getName, "UTF-8");	//å‚æ•°è§£ç ï¼Œå¾—åˆ°çˆ¶åˆ†æ”¯æ–‡ä»¶å¤¹å
+		String getPath=request.getParameter("path");	//å‚æ•°å¾—åˆ°çš„åŸå§‹è·¯å¾„å­—ç¬¦ä¸²ï¼ˆè¿˜æœªè§£ç ï¼‰
+		String parentPath=URLDecoder.decode(getPath, "UTF-8");	//å‚æ•°è§£ç ï¼Œå¾—åˆ°çˆ¶åˆ†æ”¯è·¯å¾„
 		File parent=new File(parentPath);
 		File[] fs = parent.listFiles();
 		int numberOfBranches=1;
 		for(File f:fs){
 			if(f.isDirectory())	{
-				numberOfBranches++;	//µÃµ½µ±Ç°ËùÓĞÒÑ´æÔÚµÄ·ÖÖ§ÊıÁ¿+1
+				numberOfBranches++;	//å¾—åˆ°å½“å‰æ‰€æœ‰å·²å­˜åœ¨çš„åˆ†æ”¯æ•°é‡+1
 			}
 		}
 		String path=parentPath+"\\"+parentName+"-"+numberOfBranches;
-		File directory=new File(path);	//ĞÂ·ÖÖ§µÄÎÄ¼ş¼Ğ
-		directory.mkdirs();	//´´½¨
+		File directory=new File(path);	//æ–°åˆ†æ”¯çš„æ–‡ä»¶å¤¹
+		directory.mkdirs();	//åˆ›å»º
 		PrintWriter pw = new PrintWriter(new FileWriter(path+"\\1.txt"));
 		String content=request.getParameter("content");
 		pw.print(content);
-        response.getWriter().println("Ìá½»³É¹¦");
-        response.getWriter().println("<a href=\"http://localhost:8080/novelTest\">·µ»ØÊ×Ò³</a>");
+        response.getWriter().println("æäº¤æˆåŠŸ");
+        response.getWriter().println("<a href=\"http://localhost:8080/novelTest\">è¿”å›é¦–é¡µ</a>");
         pw.close();
 	}
 
