@@ -9,6 +9,10 @@
     <servlet-class>top.neusoftware.novel.ViewBranches</servlet-class>
   </servlet>
   <servlet>
+    <servlet-name>ViewNovels</servlet-name>
+    <servlet-class>top.neusoftware.novel.ViewNovels</servlet-class>
+  </servlet>
+  <servlet>
     <servlet-name>Read</servlet-name>
     <servlet-class>top.neusoftware.novel.Read</servlet-class>
   </servlet>
@@ -23,6 +27,10 @@
   <servlet-mapping>
     <servlet-name>ViewBranches</servlet-name>
     <url-pattern>/ViewBranches</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewNovels</servlet-name>
+    <url-pattern>/ViewNovels</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>Read</servlet-name>
